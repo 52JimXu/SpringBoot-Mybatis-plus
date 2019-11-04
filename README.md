@@ -6,7 +6,7 @@
 
 #### 一、创建一个web工程没得说吧
 #### 二、导入依赖
-第一次使用maven引Oracle驱动的注意了，maven厂库是没用ojdbc，所以要自己安装，还有，如果你的Oracle版本是10g，请使用ojdbc14.jar，如果你的版本是11g，请使用ojdbc6.jar，我的版本是11g，所以我用的ojdbc6.jar，然后我提供一个下载地址吧:[ojdbc6](http://v7.jimxu.top/jar/ojdbc6.jar),毕竟官网的速度不敢恭维！！！有了jar包就要安装到maven厂库了，可以将你下载的jar包ongoing解压软件打开，MATE-INF里面有个MANIFEST.MF文件，用记事本打开就可以看到它的版本号，我这个是11.1.0.7.0，然后在jar包文件路径下打开cmd，执行:
+第一次使用maven引Oracle驱动的注意了，maven厂库是没有ojdbc，所以要自己安装，还有，如果你的Oracle版本是10g，请使用ojdbc14.jar，如果你的版本是11g，请使用ojdbc6.jar，我的版本是11g，所以我用的ojdbc6.jar，然后我提供一个下载地址吧:[ojdbc6](http://v7.jimxu.top/jar/ojdbc6.jar),毕竟官网的速度不敢恭维！！！有了jar包就要安装到maven厂库了，可以将你下载的jar包用解压软件打开，MATE-INF里面有个MANIFEST.MF文件，用记事本打开就可以看到它的版本号，我这个是11.1.0.7.0，然后在jar包文件路径下打开cmd，执行:
 
 ```mvn
 mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.1.0.7.0 -Dpackaging=jar -Dfile=ojdbc6.jar
